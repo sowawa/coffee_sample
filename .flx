@@ -1,0 +1,9 @@
+[deploy]
+sed 's/NODE_PATH/\/usr\/local\/nave\/installed\/0.4.8\/bin\/node/g' node_modules/coffee-script/bin/flx_coffee > node_modules/coffee-script/bin/coffee
+
+[replace]
+public_html/server.fcgi USER_NAME PROJECT_NAME
+
+[deploy]
+chmod 705 public_html/server.fcgi
+chmod 705 node_modules/coffee-script/bin/coffee
